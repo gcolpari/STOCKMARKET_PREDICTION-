@@ -9,3 +9,5 @@ Librairies utilisées pour le projet :
 - numpy  
 - pandas  
 - matplotlib
+- seaborn
+- mysql.connector
