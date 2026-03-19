@@ -39,11 +39,17 @@ class WindowGenerator():
 
 
         labels = np.array(labels)
-        if label_enconder is not None: 
+        inputs = np.array(inputs)
 
+        if label_enconder is not None: 
             labels = labels[:, :, label_enconder]
 
-        return np.array(inputs), np.array(labels)
+        if input_width == 1: 
+            inputs = inputs.squeeze()
+
+
+        return inputs , np.array(labels).flatten()
+        
     
     def make_tf_dataset(self, inputs, labels):
 
