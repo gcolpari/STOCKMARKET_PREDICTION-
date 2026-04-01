@@ -19,8 +19,15 @@ $interpretation = "Le modèle prévoit une légère augmentation de la valeur ci
     <!-- barre de navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Market Prediction AI</div>
-            <div class="nav-links">
+            <div class="logo">
+				
+				<img src="images/logo.png">
+		
+			</div>
+            
+			
+			
+			<div class="nav-links">
                 <a href="index.php">Accueil</a>
                 <a href="modele.php">Modèle</a>
                 <a href="prediction.php">Prédiction</a>
@@ -37,7 +44,7 @@ $interpretation = "Le modèle prévoit une légère augmentation de la valeur ci
     </header>
 
     <!-- résultat -->
-    <section class="card">
+    <section class="poliza">
         <h2>Résultat</h2>
         <p><strong>Variable prédite :</strong> <?php echo $variable; ?></p>
         <p><strong>Horizon :</strong> <?php echo $horizon; ?></p>
@@ -45,10 +52,13 @@ $interpretation = "Le modèle prévoit une légère augmentation de la valeur ci
     </section>
 
     <!-- interprétation -->
-    <section class="card">
+    <section class="poliza">
         <h2>Interprétation</h2>
         <p><?php echo $interpretation; ?></p>
     </section>
+
+
+
 
 </body>
 </html>
