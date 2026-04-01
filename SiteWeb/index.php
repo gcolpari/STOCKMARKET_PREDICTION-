@@ -1,5 +1,5 @@
 <?php
-
+/* page principale avec graphiques du notebook */
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -18,8 +18,9 @@
     <div class="nav-container">
 
         <div class="logo">
-            Stock Market Prediction
-        </div>
+			<img src="images/logo.png">
+			
+		</div>
 
         <div class="nav-links">
             <a href="index.php">Accueil</a>
@@ -53,7 +54,7 @@
 
 
 <!-- description -->
-<section class="card">
+<section class="poliza">
 
     <h2>
         Objectif
@@ -69,7 +70,7 @@
 
 
 <!-- graphiques -->
-<section class="card">
+<section class="poliza">
 
 <h2>
 Résultats des modèles
