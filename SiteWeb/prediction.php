@@ -1,5 +1,4 @@
 <?php
-/* page de prédiction simple */
 
 /* valeurs d'exemple */
 $variable = "earnings";
@@ -11,20 +10,26 @@ $interpretation = "Le modèle prévoit une légère augmentation de la valeur ci
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prédiction</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- menu -->
-    <nav>
-        <a href="index.php">Accueil</a>
-        <a href="visualisations.php">Visualisations</a>
-        <a href="modele.php">Modèle</a>
-        <a href="prediction.php">Prédiction</a>
+    <!-- barre de navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Market Prediction AI</div>
+            <div class="nav-links">
+                <a href="index.php">Accueil</a>
+                <a href="modele.php">Modèle</a>
+                <a href="prediction.php">Prédiction</a>
+            </div>
+        </div>
     </nav>
 
-    <header>
+    <!-- titre -->
+    <header class="page-header">
         <h1>Résultat de prédiction</h1>
         <p>
             Cette page montre un exemple simple de résultat produit par le modèle.
@@ -32,7 +37,7 @@ $interpretation = "Le modèle prévoit une légère augmentation de la valeur ci
     </header>
 
     <!-- résultat -->
-    <section>
+    <section class="card">
         <h2>Résultat</h2>
         <p><strong>Variable prédite :</strong> <?php echo $variable; ?></p>
         <p><strong>Horizon :</strong> <?php echo $horizon; ?></p>
@@ -40,18 +45,9 @@ $interpretation = "Le modèle prévoit une légère augmentation de la valeur ci
     </section>
 
     <!-- interprétation -->
-    <section>
+    <section class="card">
         <h2>Interprétation</h2>
         <p><?php echo $interpretation; ?></p>
-    </section>
-
-    <!-- remarque -->
-    <section>
-        <h2>Remarque</h2>
-        <p>
-            Cette valeur est un exemple de présentation.
-            Plus tard, cette page pourra être connectée au vrai modèle Python.
-        </p>
     </section>
 
 </body>
