@@ -14,7 +14,13 @@
     <!-- barre de navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Market Prediction AI</div>
+            
+			<div class="logo">
+				
+				<img src="images/logo.png">
+		
+			</div>
+			
             <div class="nav-links">
                 <a href="index.php">Accueil</a>
                 <a href="modele.php">Modèle</a>
@@ -32,7 +38,7 @@
     </header>
 
     <!-- principe -->
-    <section class="card">
+    <section class="poliza">
         <h2>Principe général</h2>
         <p>
             Le modèle reçoit des données historiques en entrée.
@@ -42,7 +48,7 @@
     </section>
 
     <!-- variables -->
-    <section class="card">
+    <section class="poliza">
         <h2>Variables utilisées</h2>
         <ul>
             <li>prix du marché</li>
@@ -54,7 +60,7 @@
     </section>
 
     <!-- modèles -->
-    <section class="card">
+    <section class="poliza">
         <h2>Modèles testés</h2>
         <ul>
             <li>baseline</li>
@@ -66,7 +72,7 @@
     </section>
 
     <!-- conclusion -->
-    <section class="card">
+    <section class="poliza">
         <h2>Conclusion simple</h2>
         <p>
             Dans notre projet, les modèles simples peuvent être plus stables
