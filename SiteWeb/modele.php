@@ -1,42 +1,48 @@
 <?php
-/* page de présentation du modèle */
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modèle</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- menu -->
-    <nav>
-        <a href="index.php">Accueil</a>
-        <a href="visualisations.php">Visualisations</a>
-        <a href="modele.php">Modèle</a>
-        <a href="prediction.php">Prédiction</a>
+    <!-- barre de navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Market Prediction AI</div>
+            <div class="nav-links">
+                <a href="index.php">Accueil</a>
+                <a href="modele.php">Modèle</a>
+                <a href="prediction.php">Prédiction</a>
+            </div>
+        </div>
     </nav>
 
-    <header>
+    <!-- titre -->
+    <header class="page-header">
         <h1>Présentation du modèle</h1>
         <p>
-            Cette page explique de manière simple le fonctionnement du modèle.
+            Cette page explique de manière simple le fonctionnement du modèle utilisé dans le projet.
         </p>
     </header>
 
-    <!-- description -->
-    <section>
+    <!-- principe -->
+    <section class="card">
         <h2>Principe général</h2>
         <p>
             Le modèle reçoit des données historiques en entrée.
-            Ensuite, il apprend des relations entre les variables.
+            Ensuite, il apprend des relations entre plusieurs variables.
             Enfin, il produit une estimation de la variable cible.
         </p>
     </section>
 
     <!-- variables -->
-    <section>
+    <section class="card">
         <h2>Variables utilisées</h2>
         <ul>
             <li>prix du marché</li>
@@ -47,8 +53,8 @@
         </ul>
     </section>
 
-    <!-- modèles testés -->
-    <section>
+    <!-- modèles -->
+    <section class="card">
         <h2>Modèles testés</h2>
         <ul>
             <li>baseline</li>
@@ -60,7 +66,7 @@
     </section>
 
     <!-- conclusion -->
-    <section>
+    <section class="card">
         <h2>Conclusion simple</h2>
         <p>
             Dans notre projet, les modèles simples peuvent être plus stables
