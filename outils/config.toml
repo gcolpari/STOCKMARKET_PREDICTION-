@@ -1,0 +1,17 @@
+[bdd]
+user = "root"
+password = "root"
+host = "localhost"
+database = "sdd4"
+raise_on_warnings = true
+
+[parametre]
+seed = 42
+input_width = 5
+label_width = 1
+shift = 1
+p_val = 0.1
+p_test = 0.1
+epochs = 40
+batch_size = 12
+fig_size = [12, 6]
