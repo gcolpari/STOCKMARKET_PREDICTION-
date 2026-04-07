@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédiction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- barre de navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+				
+				<img src="images/logo.png">
+		
+			</div>
+            
+			
+			
+			<div class="nav-links">
+                <a href="index.php">Accueil</a>
+                <a href="modele.php">Modèle</a>
+                <a href="prediction.php">Prédiction</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- titre -->
+    <header class="page-header">
+        <h1>Modèles d'IA</h1>
+        <p>
+            Dans cette page, vous allez pouvoir tester les 3 modèles qui ont été utilisés pour classer des tweets.
+        </p>
+    </header>
+
+    <!-- le test -->
+    <input type="text" id="textInput" placeholder="Enter text">
+    <button onclick="sendText()">Predict</button>
+
+    <p id="rf"></p>
+    <p id="lr"></p>
+    <p id="nb"></p>
+
+    <script>
+    async function sendText() {
+        const text = document.getElementById("textInput").value;
+
+        const response = await fetch("http://127.0.0.1:8000/predict?text=" + encodeURIComponent(text), {
+            method: "POST"
+        });
+
+        const data = await response.json();
+
+        document.getElementById("rf").innerText = "Random Forest : " + data.rf;
+        document.getElementById("lr").innerText = "Logistic Regression : " + data.lr;
+        document.getElementById("nb").innerText = "Naive Bayes : " + data.nb;
+    }
+    </script>
+
+
+
+</body>
+</html>
