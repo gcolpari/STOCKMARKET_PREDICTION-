@@ -1,27 +1,28 @@
 <?php
-/* page principale avec graphiques du notebook */
+	// Cette fichier correspond à la page d’accueil du site
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <title>Stock Market Prediction</title>
-
+    <!-- Titre affiché dans l’onglet du navigateur -->
+	<title>Stock Market Prediction</title>
+	<!-- Lien vers le fichier CSS pour le style du site -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- menu -->
+<!-- menu de navigation principal -->
 <nav class="navbar">
     <div class="nav-container">
-
+		<!-- logo du projet -->
         <div class="logo">
 			<img src="images/logo.png">
 			
 		</div>
-
+		<!-- liens de navigation vers les autres pages -->
         <div class="nav-links">
             <a href="index.php">Accueil</a>
             <a href="modele.php">Modèle</a>
@@ -32,15 +33,15 @@
 </nav>
 
 
-<!-- introduction -->
+<!-- section principale de présentation -->
 <header class="hero">
 
     <div class="hero-content">
-
+		<!-- titre principal de la page -->
         <h1>
             Prédiction des earnings
         </h1>
-
+		<!-- courte présentation du projet -->
         <p>
             Cette application web présente notre projet de data science.
             L'objectif est de prédire la variable <strong>earnings</strong>
@@ -53,9 +54,9 @@
 
 
 
-<!-- description -->
+<!-- section qui présente l’objectif du projet -->
 <section class="poliza">
-
+	
     <h2>
         Objectif
     </h2>
@@ -69,17 +70,17 @@
 
 
 
-<!-- graphiques -->
+<!-- section contenant les graphiques de résultats -->
 <section class="poliza">
 
 <h2>
 Résultats des modèles
 </h2>
-
+<!-- grille qui contient toutes les images de résultats -->
 <div class="results-grid">
 
 
-<!-- baseline -->
+<!-- résultat du modèle baseline sur l’entraînement -->
 <div class="result-box">
 
 <h3>
@@ -92,7 +93,7 @@ Baseline - Entraînement
 
 
 
-<!-- linear -->
+<!-- résultat du modèle linéaire multivariable sur l’entraînement -->
 <div class="result-box">
 
 <h3>
@@ -104,7 +105,7 @@ Linéaire multivariable - Entraînement
 </div>
 
 
-
+<!-- résultat du modèle linéaire multivariable sur le test -->
 <div class="result-box">
 
 <h3>
@@ -116,7 +117,7 @@ Linéaire multivariable - Test
 </div>
 
 
-
+<!-- résultat du modèle linéaire multivariable sur la série complète -->
 <div class="result-box">
 
 <h3>
@@ -129,7 +130,7 @@ Linéaire multivariable - Série complète
 
 
 
-<!-- linear univariable -->
+<!-- résultat du modèle linéaire univariable sur l’entraînement -->
 <div class="result-box">
 
 <h3>
@@ -141,7 +142,7 @@ Linéaire univariable - Entraînement
 </div>
 
 
-
+<!-- résultat du modèle linéaire univariable sur le test -->
 <div class="result-box">
 
 <h3>
@@ -153,7 +154,7 @@ Linéaire univariable - Test
 </div>
 
 
-
+<!-- résultat du modèle linéaire univariable sur la série complète -->
 <div class="result-box">
 
 <h3>
@@ -166,7 +167,7 @@ Linéaire univariable - Série complète
 
 
 
-<!-- dense -->
+<!-- résultat du modèle Dense sur l’entraînement -->
 <div class="result-box">
 
 <h3>
@@ -178,7 +179,7 @@ Dense - Entraînement
 </div>
 
 
-
+<!-- résultat du modèle Dense sur le test -->
 <div class="result-box">
 
 <h3>
@@ -190,7 +191,7 @@ Dense - Test
 </div>
 
 
-
+<!-- résultat du modèle Dense sur la série complète -->
 <div class="result-box">
 
 <h3>
@@ -203,7 +204,7 @@ Dense - Série complète
 
 
 
-<!-- lstm -->
+<!-- résultat du modèle LSTM sur l’entraînement -->
 <div class="result-box">
 
 <h3>
@@ -215,7 +216,7 @@ LSTM - Entraînement
 </div>
 
 
-
+<!-- résultat du modèle LSTM sur la série complète -->
 <div class="result-box">
 
 <h3>
@@ -228,7 +229,7 @@ LSTM - Série complète
 
 
 
-<!-- mse -->
+<!-- graphique du MSE sur l’entraînement -->
 <div class="result-box">
 
 <h3>
@@ -240,7 +241,7 @@ MSE - Entraînement
 </div>
 
 
-
+<!-- graphique du MSE sur la validation -->
 <div class="result-box">
 
 <h3>
@@ -253,7 +254,7 @@ MSE - Validation
 
 
 
-<!-- loss -->
+<!-- courbe de loss du modèle linéaire multivariable -->
 <div class="result-box">
 
 <h3>
@@ -265,7 +266,7 @@ Loss - Linéaire multivariable
 </div>
 
 
-
+<!-- courbe de loss du modèle linéaire univariable -->
 <div class="result-box">
 
 <h3>
@@ -277,7 +278,7 @@ Loss - Linéaire univariable
 </div>
 
 
-
+<!-- courbe de loss du modèle Dense -->
 <div class="result-box">
 
 <h3>
@@ -289,7 +290,7 @@ Loss - Dense
 </div>
 
 
-
+<!-- courbe de loss du modèle LSTM -->
 <div class="result-box">
 
 <h3>
