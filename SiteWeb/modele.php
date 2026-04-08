@@ -1,26 +1,29 @@
 <?php
-
+	// Cette fichier présente le modèle utilisé et les modèles testés dans le projet
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modèle</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Permet une bonne adaptation de la page sur téléphone et tablette -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre de la page dans l’onglet du navigateur -->
+	<title>Modèle</title>
+    <!-- Lien vers le fichier CSS -->
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <!-- barre de navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            
+            <!-- logo du site -->
 			<div class="logo">
 				
 				<img src="images/logo.png">
 		
 			</div>
-			
+			<!-- liens vers les autres pages du site -->
             <div class="nav-links">
                 <a href="index.php">Accueil</a>
                 <a href="modele.php">Modèle</a>
@@ -29,7 +32,7 @@
         </div>
     </nav>
 
-    <!-- titre -->
+    <!-- en-tête de la page -->
     <header class="page-header">
         <h1>Présentation du modèle</h1>
         <p>
@@ -37,7 +40,7 @@
         </p>
     </header>
 
-    <!-- principe -->
+    <!-- section qui explique le principe général du modèle -->
     <section class="poliza">
         <h2>Principe général</h2>
         <p>
@@ -47,7 +50,7 @@
         </p>
     </section>
 
-    <!-- variables -->
+    <!-- section qui présente les variables utilisées -->
     <section class="poliza">
         <h2>Variables utilisées</h2>
         <ul>
@@ -59,7 +62,7 @@
         </ul>
     </section>
 
-    <!-- modèles -->
+    <!-- section qui liste les modèles testés dans le projet -->
     <section class="poliza">
         <h2>Modèles testés</h2>
         <ul>
@@ -71,7 +74,7 @@
         </ul>
     </section>
 
-    <!-- conclusion -->
+    <!-- petite conclusion sur les résultats obtenus -->
     <section class="poliza">
         <h2>Conclusion simple</h2>
         <p>
