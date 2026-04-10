@@ -1,10 +1,11 @@
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 import pickle
-import os
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+# CORS (pour autoriser ton site à appeler l'API)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -13,30 +14,24 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Charger les modèles
 with open("models.pkl", "rb") as f:
     models = pickle.load(f)
 
-
-from pydantic import BaseModel
-
+# Schéma de requête
 class InputText(BaseModel):
     text: str
+
+# Endpoint
 @app.post("/predict")
-def predict(input: InputText):
+def predict(data: InputText):
     results = {}
 
-    for name in models:
+    for name in ["rf", "lr", "nb"]:
         clf, vectorizer, le = models[name]
-
-        X = vectorizer.transform([text])
+        X = vectorizer.transform([data.text])
         y_pred = clf.predict(X)
         label = le.inverse_transform(y_pred)[0]
-
         results[name] = label
 
     return results
-
-if __name__ == "__main__":
-    import uvicorn
-    port = int(os.environ.get("PORT", 8000))
-    uvicorn.run(app, host="0.0.0.0", port=port)
