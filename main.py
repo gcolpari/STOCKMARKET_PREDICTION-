@@ -16,6 +16,11 @@ app.add_middleware(
 with open("models.pkl", "rb") as f:
     models = pickle.load(f)
 
+
+from pydantic import BaseModel
+
+class InputText(BaseModel):
+    text: str
 @app.post("/predict")
 def predict(input: InputText):
     results = {}

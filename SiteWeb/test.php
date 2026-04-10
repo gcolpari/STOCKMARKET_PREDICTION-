@@ -36,12 +36,13 @@
     </header>
 
     <!-- le test -->
-    <input type="text" id="textInput" placeholder="Enter text">
-    <button onclick="sendText()">Predict</button>
-
+    <input type="text" id="textInput" placeholder="Entrez du texte">
+    <button id="bttn" onclick="sendText()">Predict</button>
+    <div id="ttt">
     <p id="rf"></p>
     <p id="lr"></p>
     <p id="nb"></p>
+    </div>
 
     <script>
         async function sendText() {
