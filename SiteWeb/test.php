@@ -47,7 +47,7 @@
     async function sendText() {
         const text = document.getElementById("textInput").value;
 
-        const response = await fetch("http://127.0.0.1:8000/predict?text=" + encodeURIComponent(text), {
+        const response = await fetch("https://stockmarket-prediction-atgx.onrender.com" + encodeURIComponent(text), {
             method: "POST"
         });
 
