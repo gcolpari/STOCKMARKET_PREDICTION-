@@ -28,6 +28,7 @@
                 <a href="index.php">Accueil</a>
                 <a href="modele.php">Modèle</a>
                 <a href="prediction.php">Prédiction</a>
+                <a href="test.php">Test Modèles</a>
             </div>
         </div>
     </nav>
