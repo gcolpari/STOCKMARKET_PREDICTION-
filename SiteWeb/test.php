@@ -44,18 +44,35 @@
     <p id="nb"></p>
 
     <script>
-    async function sendText() {
+        async function sendText() {
         const text = document.getElementById("textInput").value;
 
-        const response = await fetch("https://stockmarket-prediction-atgx.onrender.com" + encodeURIComponent(text), {
-            method: "POST"
+        const response = await fetch("https://stockmarket-prediction-atgx.onrender.com/predict", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ text: text })
         });
 
-        const data = await response.json();
+        const raw = await response.text();
+
+        console.log("STATUS:", response.status);
+        console.log("RAW RESPONSE:", raw);
+
+        let data;
+        try {
+            data = JSON.parse(raw);
+        } catch (e) {
+            console.error("PAS DU JSON !");
+            return;
+        }
 
         document.getElementById("rf").innerText = "Random Forest : " + data.rf;
         document.getElementById("lr").innerText = "Logistic Regression : " + data.lr;
         document.getElementById("nb").innerText = "Naive Bayes : " + data.nb;
+
+        console.log(data);
     }
     </script>
 

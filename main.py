@@ -17,7 +17,7 @@ with open("models.pkl", "rb") as f:
     models = pickle.load(f)
 
 @app.post("/predict")
-def predict(text: str):
+def predict(input: InputText):
     results = {}
 
     for name in models:
