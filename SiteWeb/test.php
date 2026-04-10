@@ -49,7 +49,7 @@
         async function sendText() {
         const text = document.getElementById("textInput").value;
 
-        const response = await fetch("https://stockmarket-prediction-atgx.onrender.com/predict", {
+        const response = await fetch("https://fastapi-production-68e3.up.railway.app/predict", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
