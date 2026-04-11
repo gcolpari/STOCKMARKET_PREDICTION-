@@ -26,6 +26,44 @@ Les modèles suivants ont été implémentés et évalués :
 
 ---
 
+# Arborescence du projet
+
+```bash
+├── outils/
+│   └── Contient toutes les fonctions utilitaires du projet ainsi que la classe WindowGenerator utilisée pour l’entraînement des modèles.
+│
+├── BDD/
+│   └── Base de données et sa description.
+│
+├── RAW_DATA/
+│   └── Données brutes non traitées.
+│
+├── CLEAN_DATA/
+│   └── Données après nettoyage et prétraitement.
+│
+├── SiteWeb/
+│   └── Site web associé au projet.
+│
+├── models/
+│   └── Modèles entraînés utilisés pour le déploiement.
+│
+├── AED.ipynb
+│   └── Notebook d’analyse exploratoire des données (EDA).
+│
+├── cleaning.ipynb
+│   └── Notebook de nettoyage et prétraitement des données.
+│
+├── Prediction.ipynb
+│   └── Notebook d’entraînement des modèles et analyses de prédiction/statistiques.
+│
+├── requirements.txt
+│   └── Dépendances Python nécessaires au projet.
+│
+└── LICENSE
+    └── Licence du projet.
+
+```
+
 # Données
 
 Le projet s’appuie sur plusieurs sources de données hétérogènes :
