@@ -1,6 +1,52 @@
 # STOCKMARKET_PREDICTION-
 
-# Introducción
+# Introduction
+
+L’objectif de ce projet est de prédire la performance du S&P 500 à l’aide de modèles d’apprentissage supervisé ainsi que de modèles de *deep learning* orientés *forecasting*. Le S&P 500 est un indice boursier de référence représentant les 500 plus grandes entreprises cotées aux États-Unis. Il est largement utilisé comme indicateur de la performance globale du marché financier.
+
+Dans ce cadre, plusieurs jeux de données économiques et financiers sont mobilisés afin de construire des modèles capables de capturer les dynamiques temporelles et d’améliorer la qualité des prédictions. L’objectif est d’évaluer et de comparer différentes approches, allant des modèles statistiques classiques aux architectures neuronales avancées.
+
+---
+
+# Modèles
+
+Les modèles suivants ont été implémentés et évalués :
+
+## Modèles statistiques
+
+* Régression linéaire simple
+* Régression linéaire multiple
+* Régression linéaire multiple intégrant l’inflation
+* Régression linéaire multiple intégrant l’inflation et l’indice Big Mac
+
+## Modèles de machine learning et deep learning
+
+* Réseau de neurones dense (*Deep Neural Network – DNN*)
+* Réseau de neurones récurrent de type LSTM (*Long Short-Term Memory*) unidirectionnel
+
+---
+
+# Données
+
+Le projet s’appuie sur plusieurs sources de données hétérogènes :
+
+* Données historiques du S&P 500
+* Données textuelles issues de tweets financiers
+* Données comportementales liées aux marchés financiers
+* Données sur les cryptomonnaies (Bitcoin et Ethereum)
+* Indice des prix à la consommation (inflation)
+* Indice Big Mac
+
+## Sources
+
+* https://github.com/datasets/s-and-p-500/blob/main/data/data.csv
+* https://www.kaggle.com/datasets/davidwallach/financial-tweets
+* https://www.kaggle.com/datasets/ziya07/financial-behavior
+* https://www.kaggle.com/datasets/kapturovalexander/bitcoin-and-ethereum-prices-from-start-to-2023
+* https://fred.stlouisfed.org/series/CPIAUCSL
+* https://www.kaggle.com/datasets/vittoriogiatti/bigmacprice
+
+
 
 -----------
 
