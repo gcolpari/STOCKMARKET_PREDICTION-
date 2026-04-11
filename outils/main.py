@@ -15,7 +15,7 @@ app.add_middleware(
 )
 
 # Charger les modèles
-with open("models.pkl", "rb") as f:
+with open("models/models.pkl", "rb") as f:
     models = pickle.load(f)
 
 # Schéma de requête
