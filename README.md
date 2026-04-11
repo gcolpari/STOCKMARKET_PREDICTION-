@@ -116,3 +116,21 @@ Librairies utilisées pour le projet :
 - matplotlib
 - seaborn
 - mysql.connector
+- tensorflow
+- fastapi
+- uvicorn
+- scikit-learn
+
+## Contributeur 
+
+- Gabriel Estevez
+  Conception de la base de données, modèles de forecasting et analyse exploratoire des données (AED).
+
+- Santiago Roque
+  Développement du site web, rédaction du compte rendu et BERTopic.
+
+- Gabriel Colpari
+  Modèles de forecasting, rédaction du compte rendu et analyse exploratoire des données (AED).
+
+- Léandre Vignol
+  Développement de l’API, modèle de classification de tweets et analyse exploratoire des données (AED).
