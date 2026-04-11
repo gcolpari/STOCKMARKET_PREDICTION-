@@ -1,0 +1,338 @@
+/* J’ai changé le fond pour donner plus de profondeur et un style plus moderne au site */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(212, 175, 55, 0.16), transparent 18%),
+        radial-gradient(circle at 85% 25%, rgba(37, 99, 235, 0.16), transparent 22%),
+        radial-gradient(circle at 50% 75%, rgba(255, 255, 255, 0.04), transparent 18%),
+        linear-gradient(135deg, #050b16 0%, #091224 40%, #0f1b33 100%);
+    color: #eaf0f6;
+}
+
+/* J’ai modifié la barre de navigation pour qu’elle soit plus moderne et mieux intégrée au fond */
+.navbar {
+    background: rgba(15, 23, 42, 0.90);
+    border-bottom: 1px solid rgba(201, 162, 39, 0.18);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    min-height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    height: 90px;
+    overflow: hidden;
+}
+
+/* J’ai un peu réduit le logo pour garder une barre de navigation plus équilibrée. */
+.logo img {
+    width: 190px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+/* section principale de la page d'accueil */
+.hero {
+    background: linear-gradient(135deg, #0f172a, #1a2333);
+    padding: 70px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(201, 162, 39, 0.15);
+}
+
+/* contenu du hero */
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+    font-size: 42px;
+    color: #d4af37;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #dbe4ee;
+}
+
+/* Mis à jour de l’en-tête pour que soit plus compact et plus harmonieux que avant */
+.page-header {
+    max-width: 900px;
+    margin: 24px auto 20px auto;
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.96), rgba(15, 27, 51, 0.92));
+    backdrop-filter: blur(4px);
+    padding: 18px 26px;
+    border-radius: 18px;
+    border: 1px solid rgba(201, 162, 39, 0.20);
+    border-left: 5px solid #d4af37;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
+}
+
+.page-header h1 {
+    margin: 0 0 10px 0;
+    color: #d4af37;
+    font-size: 26px;
+}
+
+.page-header p {
+    margin: 0;
+    color: #dbe4ee;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 780px;
+}
+
+/* cartes */
+.card {
+    max-width: 1000px;
+    margin: 25px auto;
+    background: #111827;
+    padding: 30px;
+    border-radius: 14px;
+    border-left: 4px solid #d4af37;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Mis à jour, j’ai réduit la largeur des blocs */
+.poliza {
+    max-width: 900px;
+    margin: 25px auto;
+    background: linear-gradient(135deg, rgba(19, 28, 46, 0.96), rgba(15, 23, 42, 0.93));
+    backdrop-filter: blur(4px);
+    padding: 28px;
+    border-radius: 18px;
+    border: 1px solid rgba(212, 175, 55, 0.30);
+    border-left: 6px solid #d4af37;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.32);
+}
+
+
+/* titres */
+h2, h3 {
+    color: #d4af37;
+}
+
+/* titres dans la poliza */
+.poliza h2,
+.poliza h3 {
+    color: #f3d57a;
+}
+
+/* texte */
+p, li {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #dbe4ee;
+}
+
+/* texte dans la poliza */
+.poliza p,
+.poliza li {
+    color: #eef4fa;
+}
+
+/* listes */
+ul {
+    padding-left: 20px;
+}
+
+/* grille des graphiques */
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 25px;
+}
+
+/* boîte de graphique */
+.chart-box {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+/* hauteur fixe pour les graphiques */
+.chart-box canvas {
+    width: 100% !important;
+    height: 320px !important;
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* affichage sur grand écran */
+@media (min-width: 900px) {
+    .charts-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .charts-grid .chart-box:last-child {
+        grid-column: 1 / 3;
+    }
+}
+
+/* affichage sur petit écran */
+@media (max-width: 700px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        margin: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .card,
+    .page-header,
+    .poliza {
+        margin: 18px;
+        padding: 20px;
+    }
+}
+
+
+/* J’ai amélioré l’affichage des résultats pour qu’ils soient plus propres et mieux espacés. */
+.results-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 26px;
+    margin-top: 25px;
+}
+
+.result-box {
+    background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+    border: 1px solid rgba(212, 175, 55, 0.16);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.20);
+}
+
+.result-box h3 {
+    color: #f3d57a;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+.result-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    background: white;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 1000px) {
+    .results-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* J’ai ajouté ces styles pour mieux mettre en valeur la prédiction et rendre la page plus visuelle. */
+.prediction-highlight {
+    text-align: center;
+    padding: 50px 30px;
+}
+
+.prediction-value {
+    font-size: 72px;
+    font-weight: 800;
+    color: #f3d57a;
+    margin: 20px 0 10px 0;
+    text-shadow: 0 0 18px rgba(212, 175, 55, 0.18);
+}
+
+.prediction-subtitle {
+    font-size: 18px;
+    color: #dbe4ee;
+    margin: 0;
+}
+
+.prediction-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.info-box {
+    background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.info-label {
+    font-size: 13px;
+    color: #b8c4d6;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.info-value {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.interpretation-box p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #eef4fa;
+    max-width: 850px;
+}
+
+@media (max-width: 900px) {
+    .prediction-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prediction-value {
+        font-size: 52px;
+    }
+}
