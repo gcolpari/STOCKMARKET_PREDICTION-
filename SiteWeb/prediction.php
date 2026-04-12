@@ -36,6 +36,7 @@ $interpretation = "Le modèle prévoit une légère augmentation de la valeur ci
                 <a href="index.php">Accueil</a>
                 <a href="modele.php">Modèle</a>
                 <a href="prediction.php">Prédiction</a>
+				<a href="test.php">Tester des modèles</a>
             </div>
         </div>
     </nav>
