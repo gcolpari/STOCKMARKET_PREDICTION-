@@ -1,5 +1,5 @@
 # STOCKMARKET_PREDICTION-
-
+# Lien à l'application web : https://projetpredictionmarket.infinityfreeapp.com/?i=1
 # Introduction
 
 L’objectif de ce projet est de prédire la performance du S&P 500 à l’aide de modèles d’apprentissage supervisé ainsi que de modèles de *deep learning* orientés *forecasting*. Le S&P 500 est un indice boursier de référence représentant les 500 plus grandes entreprises cotées aux États-Unis. Il est largement utilisé comme indicateur de la performance globale du marché financier.
